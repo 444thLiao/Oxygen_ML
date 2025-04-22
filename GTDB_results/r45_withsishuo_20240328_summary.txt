@@ -1,0 +1,50 @@
+;   MEGA-CC (Molecular Evolutionary Genetics Analysis Compute Core)
+;
+;   Suggested Citation for MEGA-CC 10:
+;
+;   Kumar S, Stecher G, Li M, Knyaz C, Tamura K
+;   MEGA X: Molecular Evolutionary Genetics Analysis across computing platforms
+;   Molecular Biology and Evolution (2018) 35:1547-1549
+;
+;   Kumar S, Stecher G, Peterson D, and Tamura K
+;   MEGA-CC: Computing Core of Molecular Evolutionary Genetics
+;   Analysis Program for Automated and Iterative Data Analysis.
+;   Bioinformatics (2012) 28:2685-2686 (Epub 2012 Aug 24)
+
+[Application Info]
+
+	Version                                 = 10.2.5
+	Build                                   = 10210330-x86_64
+	User Interface                          = CommandLine
+	Operating System                        = linux
+
+[General Info]
+
+	Data Type                               = Newick tree
+	No. of Taxa                             =    80787
+	Data File                               = './intree.newick'
+	Settings File                           = './reltime.mao'
+	Command Line                            = /mnt/home-user/thliao/software/megax/megacc -a reltime.mao -c ./wol_cal_withsishuo_20240328.txt -g ./outgroup.txt -t ./intree.newick -o ./r45_withsishuo_20240328
+
+[Analysis Settings]
+
+	Analysis                                = Estimate Divergence Times (Branch Lengths)
+	Tree to Use                             = Use tree from file
+	Max Relative Rate Ratio                 = 20
+	Has Time Limit                          = False
+	Maximum Execution Time                  = -1
+	datatype                                = snNucleotide
+	containsCodingNuc                       = False
+	MissingBaseSymbol                       = ?
+	IdenticalBaseSymbol                     = .
+	GapSymbol                               = -
+	Labelled Sites                          = All Sites
+	Labels to Include                       = 
+
+[Analysis Statistics]
+
+	Start Time                              = 03/28/2024 11:21:07 PM
+	End Time                                = 03/29/2024 04:48:41 AM
+	Execution Time                          = 19653.699 (seconds)
+	Max Heap Memory Used                    = 15.258 (MB)
+	Sum of branch lengths                   = 4270.483
