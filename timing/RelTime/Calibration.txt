@@ -1,0 +1,11 @@
+!MRCA='Root' TaxonA='GB_GCA_021162505.1' TaxonB='GB_GCA_003511165.1' maxtime=45.00000000 mintime=23.00000000 calibrationName='Root-split';
+!MRCA='Crown Actinomycetota' TaxonA='GB_GCA_015711695.1' TaxonB='RS_GCF_013281975.1' Distribution=Normal mean=32.107796301271 stddev=2.60458508071229 calibrationName='Crown-Actinomycetota';
+!MRCA='Crown Planctomycetota' TaxonA='GB_GCA_024274785.1' TaxonB='GB_GCA_002746535.1' Distribution=Normal mean=30.8985848152142 stddev=2.38870791326378 calibrationName='Crown-Planctomycetota';
+!MRCA='Crown Verrucomicrobiota' TaxonA='GB_GCA_023265515.1' TaxonB='GB_GCA_022446985.1' Distribution=Normal mean=28.652610631152 stddev=2.5856068025667 calibrationName='Crown-Verrucomicrobiota';
+!MRCA='Crown Fibrobacterota' TaxonA='RS_GCF_000474745.1' TaxonB='GB_GCA_001800515.1' Distribution=Normal mean=29.5778105928515 stddev=2.33914975057648 calibrationName='Crown-Fibrobacterota';
+!MRCA='Crown Acidobacteriota' TaxonA='GB_GCA_016932915.1' TaxonB='GB_GCA_002402325.1' Distribution=Normal mean=30.3456297933605 stddev=2.3222173926293 calibrationName='Crown-Acidobacteriota';
+!MRCA='Crown Alphaproteobacteria(Pseudomonadota)' TaxonA='GB_GCA_018623135.1' TaxonB='GB_GCA_001872725.1' Distribution=Normal mean=28.159629015008 stddev=1.92765466040697 calibrationName='Crown-Alphaproteobacteria(Pseudomonadota)';
+!MRCA='Crown Chloroflexota' TaxonA='GB_GCA_013390565.1' TaxonB='GB_GCA_005881435.1' Distribution=Normal mean=30.6307977533397 stddev=2.59103987010553 calibrationName='Crown-Chloroflexota';
+!MRCA='Crown Cyanobacteria(Cyanobacteriia)' TaxonA='RS_GCF_018389385.1' TaxonB='RS_GCF_000332275.1' Distribution=Normal mean=25.485059012324 stddev=1.79772117525088 calibrationName='Crown-Cyanobacteria(Cyanobacteriia)';
+!MRCA='Crown Armatimonadota' TaxonA='GB_GCA_002305165.1' TaxonB='GB_GCA_020060775.1' Distribution=Normal mean=30.6395040641595 stddev=2.57045425116054 calibrationName='Crown-Armatimonadota';
+!MRCA='Crown Eremiobacterota' TaxonA='GB_GCA_003244105.1' TaxonB='GB_GCA_022704525.1' Distribution=Normal mean=32.5263001695862 stddev=2.66929753964215 calibrationName='Crown-Eremiobacterota';
