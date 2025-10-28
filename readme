@@ -60,6 +60,8 @@ Source data for some figures.
 Within the scripts, if you find any import like `from bin.format_newick import renamed_tree`. Please referred to the other repo `https://github.com/444thLiao/evol_tk`.
 
 
+Proteins used in Davin 2025 are deposited here. A [Zenodo Link](https://zenodo.org/records/17338761)
+
 # Data availability
 
 
