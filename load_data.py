@@ -30,10 +30,6 @@ os.chdir("/mnt/ivy/thliao/project/ML_oxygen")
 # %pylab inline
 
 
-tax_tab = "/home-user/thliao/.cache/ncbi-genome-download/taxonomy.tab"
-tax_df = pd.read_csv(tax_tab, sep="\t", index_col=0)
-genome2tax = tax_df.to_dict(orient="index")
-
 
 def get_trait_data():
     NCBI_df = pd.read_csv("/home-user/thliao/project/ML_oxygen/training_sets/processed_data/NCBI_trait.tab",
@@ -111,9 +107,6 @@ genome2oxy = sub_NCBI_df['metabolism'].to_dict()
 genome2oxy_bin = {k: y_mapping[v]
                   for k, v in sub_NCBI_df['metabolism'].to_dict().items()}
 
-# phy_array = np.array([genome2tax[_.split('.')[0]]['phylum']
-#                       for _ in sub_NCBI_df.index])
-
 kegg_bin_df = pd.read_csv(f"/mnt/ivy/thliao/project/ML_oxygen/training_sets/processed_data/20190810kegg_anno.tab", sep="\t", index_col=0)
 # print(pfam_bin_df.shape, pfam_num_df.shape)
 print(kegg_bin_df.shape)
@@ -136,8 +129,8 @@ bac_kegg_bin_df.loc[:,'number of Coding seqs'] = complete_df.reindex(bac_data_df
 X = bac_kegg_bin_df
 X = X.loc[:,X.columns[:-2]]
 #X = X.loc[:,X.sum(0)!=0]
-sub_tax_df = tax_df.reindex([_.split('.')[0] for _ in bac_data_df.index])
-sub_tax_df.index = bac_data_df.index
+# sub_tax_df = tax_df.reindex([_.split('.')[0] for _ in bac_data_df.index])
+# sub_tax_df.index = bac_data_df.index
 #sub_tax_df
 
 y_bin = np.array([y_mapping[_] for _ in y_raw])
