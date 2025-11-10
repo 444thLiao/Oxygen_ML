@@ -7,7 +7,7 @@ This repository contains the scripts used to analyze data and create figures for
 
 # Directory and Script Descriptions
 
-If there are files missing, it might because it is too large. See XXXXX.
+If there are files missing, it might because it is too large. See [1007 bacterial proteomes](https://zenodo.org/records/17338761).
 
 ## python scripts
 
@@ -21,7 +21,7 @@ Scripts for using five different predictors and GBDT40-LR
 
 Timed Trees and Genome information excel retrieved from Davin 2025
 
-`Final.combined.py` means how to collect all six predicots and merged them into one
+`Final.combined.py` means how to collect all six predictor results and merged them into one
 
 ## Evaluate6Soft
 
