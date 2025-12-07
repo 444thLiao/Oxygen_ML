@@ -35,7 +35,6 @@ def parse_o(inf):
         l2ko[rows[0]] = ';'.join(sorted(rows[1:]))
     return l2ko
 
-
 dfs = []
 for kofamout in tqdm(glob(f'{odir}/*.kofamout')):
     genome = kofamout.split('/')[-1].replace('.kofamout','')

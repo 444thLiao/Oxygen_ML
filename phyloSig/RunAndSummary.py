@@ -52,7 +52,7 @@ for (i in 1:n) {
     pb$tick()
   }
   
-write.table(alpha_results,'/mnt/ivy/thliao/project/ML_oxygen/training_sets/phylo_D_results/phyloglm_results.tsv')
+write.table(alpha_results,'/mnt/ivy/thliao/project/ML_oxygen/training_sets/phylo_D_results/phyloglm_results.tsv',sep='\t')
 
 # ✅ α（alpha）
 # 代表 系统发育信号的强度（phylogenetic correlation strength）：

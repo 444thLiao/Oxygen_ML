@@ -35,6 +35,13 @@ davin_prediction.index = [_.split('/')[-1].replace('.faa','') for _ in davin_pre
 bayesian_prediction = pd.read_csv('/mnt/storage3/thliao/project/ML_oxygen/davin_genomes_goinganalysis/bayesian/predicted_results.tsv',sep='\t',index_col=0)
 
 top40_prediction = pd.read_csv('/mnt/storage3/thliao/project/ML_oxygen/davin_genomes_goinganalysis/annotop40/top40.prediction',sep='\t',index_col=0)
+
+GBDT6_phyloglm34_prediction = pd.read_csv('/mnt/ivy/thliao/project/ML_oxygen/training_sets/extra_ValidateGBDT40/GBDT6_phyloglm34.prediction',sep='\t',index_col=0)
+
+phyloglm40_prediction = pd.read_csv('/mnt/ivy/thliao/project/ML_oxygen/training_sets/extra_ValidateGBDT40/phyloglm_40.prediction',sep='\t',index_col=0)
+
+GBDT6_prediction = pd.read_csv('/mnt/ivy/thliao/project/ML_oxygen/training_sets/extra_ValidateGBDT40/GBDT6.prediction',sep='\t',index_col=0)
+
 ####
 gids = sorted(list(bayesian_prediction.index))
 merged_df = pd.DataFrame(index=gids)
@@ -56,6 +63,17 @@ merged_df.loc[:,'bacdivAI:non-Anaerobe:prob'] = bacdiv_prediction.reindex(gids)[
 merged_df.loc[:,'bacdivAI:non-Anaerobe:label'] = (bacdiv_prediction.reindex(gids)['BacDive_ai:Aerobe']>bacdiv_prediction.reindex(gids)['BacDive_ai:Anaerobe']).astype(int)
 merged_df.loc[:,'top40:non-Anaerobe:prob'] = top40_prediction.reindex(gids)['LR prob']
 merged_df.loc[:,'top40:non-Anaerobe:label'] = top40_prediction.reindex(gids)['LR']
+
+merged_df.loc[:,'GBDT6_phyloglm34:non-Anaerobe:prob'] = GBDT6_phyloglm34_prediction.reindex(gids)['LR prob']
+merged_df.loc[:,'GBDT6_phyloglm34:non-Anaerobe:label'] = GBDT6_phyloglm34_prediction.reindex(gids)['LR']
+
+merged_df.loc[:,'phyloglm40:non-Anaerobe:prob'] = phyloglm40_prediction.reindex(gids)['LR prob']
+merged_df.loc[:,'phyloglm40:non-Anaerobe:label'] = phyloglm40_prediction.reindex(gids)['LR']
+
+
+merged_df.loc[:,'GBDT6:non-Anaerobe:prob'] = GBDT6_prediction.reindex(gids)['LR prob']
+merged_df.loc[:,'GBDT6:non-Anaerobe:label'] = GBDT6_prediction.reindex(gids)['LR']
+
 merged_df.to_csv('/mnt/storage3/thliao/project/ML_oxygen/davin_genomes_goinganalysis/MergedAllprediction.tsv',sep='\t',index=1)
 
 import itertools
@@ -89,7 +107,8 @@ for colname,col in tqdm(bin_df.iteritems()):
         for k,v in col.to_dict().items():
             f1.write(f"{k}\t{v}\n") 
     cmd = f"/mnt/home-user/thliao/anaconda3/envs/r_env/bin/Rscript /mnt/storage3/thliao/project/ML_oxygen/testing_sets/ace.r {odir}/ACE_DiffSofts/{colname.split(':')[0]}.tab /mnt/storage3/thliao/project/ML_oxygen/davin_genomes_goinganalysis/reftree.newick {odir}/ACE_DiffSofts/{colname.split(':')[0]}.anc"
-    os.system(cmd)
+    if not exists(f"{odir}/ACE_DiffSofts/{colname.split(':')[0]}.anc"):
+        os.system(cmd)
 
 
 
